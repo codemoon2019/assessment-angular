@@ -1,0 +1,33 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+        <mat-toolbar>
+            <span>Register and account</span>
+          </mat-toolbar>
+        <form appearance="fill" #register="ngForm" (ngSubmit)="onSubmit(register)" fxLayout="column">
+            <mat-form-field>
+                <mat-label>Enter your desired username:</mat-label>
+                <input matInput placeholder="email@example.com" name="username" ngModel #username="ngModel" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Enter your firstname:</mat-label>
+                <input matInput placeholder="Firstname" name="firstName" ngModel #firstName="ngModel" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Enter your lastname:</mat-label>
+                <input matInput placeholder="Lastname" name="lastName" ngModel #lastName="ngModel" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Enter your password:</mat-label>
+                <input type="password" matInput placeholder="**********"  name="password" ngModel #password="ngModel" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Retype your password:</mat-label>
+                <input type="password" matInput placeholder="**********"  name="repassword" ngModel #repassword="ngModel" required>
+
+            </mat-form-field>
+            <button mat-raised-button [disabled]="register.invalid">Register</button>
+            <p style="margin-top:10px; text-align:center;">Already have account ? <a routerLink="/login">Login here</a></p>
+        </form>
+        
+    </mat-card>
+</div>

@@ -1,0 +1,10 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+        <mat-toolbar>
+            <span>Welcome! {{ username }}</span>
+          </mat-toolbar>
+        <form appearance="fill" #logout="ngForm" (ngSubmit)="onSubmit(logout)" style="margin-top:10px;" fxLayout="column">
+            <button mat-raised-button>Logout my account</button>
+        </form>
+    </mat-card>
+</div>
